@@ -6,9 +6,9 @@ function App() {
 
   let [글제목, 글제목변경] = useState(['남자코트 추천','강남 우동 맛집', '파이썬 독학']);
   let [따봉, 따봉변경] = useState(0);
-
   let [modal,modal변경] = useState(false);
   let [누른제목,누른제목변경] = useState(0);
+  let [입력값, 입력값변경] = useState('');
 
   let posts = '강남 고기 맛집';
 
@@ -36,9 +36,7 @@ function App() {
     })
   }
 
-      <button onClick= {() => {누른제목변경(0)}}>버튼1</button>
-      <button onClick= {() => {누른제목변경(1)}}>버튼2</button>
-      <button onClick= {() => {누른제목변경(2)}}>버튼3</button>
+  <input onChange={ () => {} } />
 
       <button onClick={ () => { modal변경(!modal) } } >버튼</button>
 
@@ -51,6 +49,7 @@ function App() {
     </div>
   );
 }
+
 
 function Modal(props){
   return (
