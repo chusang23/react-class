@@ -36,9 +36,12 @@ function App() {
     })
   }
 
-  <input onChange={ (e) => {입력값변경(e.target.value)} } />
+  <div className="publish">
+    <input />
+    <button>저장</button>
+  </div>
 
-      <button onClick={ () => { modal변경(!modal) } } >버튼</button>
+      <button onClick={ () => { modal변경(!modal) } } >열고닫기</button>
 
       {
         modal === true
