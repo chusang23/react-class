@@ -34,7 +34,6 @@ function App() {
       </div>
       )
     })
-    
   }
 
   <div className="publish">
@@ -45,6 +44,8 @@ function App() {
       글제목변경(arrayCopy);
       }}>저장</button>
   </div>
+
+  <Profile />
 
       <button onClick={ () => { modal변경(!modal) } } >열고닫기</button>
 
@@ -67,6 +68,23 @@ function Modal(props){
     <p>상세내용</p>
   </div>
   )
+}
+
+class Profile extends React.Component {
+  constructor(){
+    super();
+    this.state = { name : 'kim', age: 30 }
+  }
+
+  render(){
+    return (
+      <div>
+        <h3>프로필입니다</h3>
+        <p>저는 {this.state.name} 입니다.</p>
+        <button onClick={()=>{this.setState({name : "park"})}}>버튼</button>
+      </div>
+    )
+  }
 }
 
 export default App;
