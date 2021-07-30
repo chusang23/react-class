@@ -1,9 +1,13 @@
 import logo from './logo.svg';
+import React, {useState} from 'react';
 import {Navbar,Container,Nav,NavDropdown,Jumbotron,Button } from 'react-bootstrap';
 import './App.css';
+import data from './data.js';
 
 
 function App() {
+
+  let [shoes, shoes변경] = useState(data);
   return (
     <div className="App">
       <Navbar bg="light" expand="lg">
