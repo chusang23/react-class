@@ -34,6 +34,7 @@ function App() {
   </Container>
 </Navbar>
 
+<switch>
 
 <Route exact path="/">
 <Jumbotron className="background">
@@ -61,10 +62,16 @@ function App() {
   <Detail/>
 </Route>
 
+<Route path="/:id">
+  <div>아무거나 적었을떄</div>
+</Route>
+
+</switch>
 
     </div>
   );
 }
+
 
 function Card(props){
   return (
