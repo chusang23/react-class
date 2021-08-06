@@ -1,9 +1,8 @@
 /* eslint-disable */
 
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {useHistory, useParams } from 'react-router-dom';
 import styled from 'styled-components';
-import './Detail.scss';
 
 let 박스 = styled.div`
   padding: 20px;
@@ -14,7 +13,12 @@ let 제목 = styled.div`
   color: ${ props => props.색상 }
 `;
 
+
 function Detail(props){
+
+  useEffect(() => {
+    console.log(11111)
+  });
 
     let { id } = useParams();
     let 찾은상품 = props.shoes.find(function(상품){
