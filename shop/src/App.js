@@ -51,7 +51,7 @@ function App() {
   <div className="row">
     {
       shoes.map((a,i) => {
-        return <Card shoes={shoes[i]} i={i}/>
+        return <Card shoes={shoes[i]} i={i} key={i}/>
       })
     }
     </div>
@@ -59,6 +59,8 @@ function App() {
       axios.get('https://codingapple1.github.io/shop/data2.json')
       .then((result)=>{
         console.log(result.data)
+        shoes변경([ ...shoes, ...result.data ]);
+
       })
       .catch(()=>{})
     }}>더보기</button>
