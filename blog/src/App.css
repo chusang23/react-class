@@ -13,6 +13,11 @@ body {
   font-weight: 600;
   font-size: 20px;
 }
+
+.list {
+  text-align: left;
+  padding: 20px;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
