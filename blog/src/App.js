@@ -15,6 +15,7 @@ function App() {
     newArray[0] = '여자 코트 추천';
     글제목변경( newArray );
   }
+  
   return (
   <div className="App">
       <div className="black-nav">
@@ -32,7 +33,13 @@ function App() {
       <p>2월 19일 발행</p>
       <hr/>
     </div>
+    <div className="modal">
+    <h2>제목</h2>
+    <p>날씨</p>
+    <p>상세내용</p>
   </div>
+
+</div>
   );
 }
 
