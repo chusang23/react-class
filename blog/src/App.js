@@ -32,17 +32,20 @@ function App() {
       <h3>{ 글제목[1] }</h3>
       <p>2월 18일 발행</p>
       <hr/>
-      <h3 onClick={ ()=> (modal변경(true))}>{ 글제목[2] }</h3>
+      <h3>{ 글제목[2] }</h3>
       <p>2월 19일 발행</p>
       <hr/>
     </div>
 
-    {
-      modal === true
-      ? <Modal></Modal>
-      : null
-    }
+    <button onClick={ ()=> {modal변경(true)}}>
+      버튼
+    </button>
 
+    {
+    modal === true
+    ? <Modal></Modal>
+    : null
+}
 </div>
   );
 }
