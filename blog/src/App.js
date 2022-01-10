@@ -37,9 +37,17 @@ function App() {
       <hr/>
     </div>
 
-    <button onClick={ ()=> {modal변경(true)}}>
-      버튼
-    </button>
+    {
+      글제목.map(function(a){
+        return (
+        <div className="list">
+          <h3>{ a }</h3>
+          <p>2월 18일 발행</p>
+          <hr/>
+        </div>
+        )
+      })
+    }
 
     {
     modal === true
