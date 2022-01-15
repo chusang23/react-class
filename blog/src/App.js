@@ -37,7 +37,6 @@ function App() {
       <hr/>
     </div>
 
-
     {
       글제목.map(function(a){
         return (
