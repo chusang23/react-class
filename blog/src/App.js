@@ -8,10 +8,9 @@ function App() {
 
   let [글제목,글제목변경] = useState(['남자 코트 추천', '강남 우동 맛집','강남 맛집']);
   let [따봉,따봉변경] = useState(0);
-
   let [modal,modal변경] = useState(false);
-
   let posts = '강남 고기 맛집';
+  let [누른제목,누른제목변경] = useState(0);
 
   function 제목바꾸기(){
     var newArray = [...글제목];
@@ -49,6 +48,11 @@ function App() {
       })
     }
 
+    <button onClick={ ()=>{} }>버튼1</button>
+    <button onClick={ ()=>{} }>버튼2</button>
+    <button onClick={ ()=>{} }>버튼3</button>
+
+    <button onClick={ ()=>{modal변경(!modal)} }>열고닫기</button>
     {
     modal === true
     ? <Modal></Modal>
@@ -61,7 +65,7 @@ function App() {
 function Modal(){
   return (
     <div className="modal">
-    <h2>제목</h2>
+    <h2> {props.글제목[props.누른제목]}</h2>
     <p>날씨</p>
     <p>상세내용</p>
   </div>
