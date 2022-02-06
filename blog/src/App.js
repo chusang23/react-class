@@ -52,6 +52,7 @@ function App() {
   );
 }
 
+
 function Modal(props){
   return (
     <div className="modal">
