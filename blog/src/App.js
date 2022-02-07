@@ -9,8 +9,8 @@ function App() {
   let [글제목,글제목변경] = useState(['남자 코트 추천', '강남 우동 맛집','강남 맛집']);
   let [따봉,따봉변경] = useState(0);
   let [modal,modal변경] = useState(false);
-  let posts = '강남 고기 맛집';
   let [누른제목,누른제목변경] = useState(0);
+  let [입력값, 입력값변경] = useState('');
 
   function 제목바꾸기(){
     var newArray = [...글제목];
@@ -28,7 +28,7 @@ function App() {
     {
       글제목.map(function(a, i){
         return (
-        <div className="list">
+        <div className="list" key={i}>
           <h3 onClick={ ()=>{누른제목변경(i)} }> { a } <span onClick={ ()=>{ 따봉변경(따봉 + 1) }}>👍</span> {따봉} </h3>
           <p>2월 18일 발행</p>
           <hr/>
@@ -36,6 +36,8 @@ function App() {
         )
       })
     }
+
+    <input onChange= { (e) => {입력값변경(e.target.value) }}></input>
 
 
     {/* <button onClick={ ()=>{누른제목변경(0)} }>버튼1</button>
